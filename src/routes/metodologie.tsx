@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/metodologie")({
   head: () => ({
     meta: [
-      { title: "Metodologie — Hidrocronică" },
+      { title: "Metodologie — DANUBIA" },
       { name: "description", content: "Cele șase modele de prognoză, backtest walk-forward, detecția anomaliilor și simularea what-if pentru calitatea apei Dunării." },
-      { property: "og:title", content: "Metodologie — Hidrocronică" },
+      { property: "og:title", content: "Metodologie — DANUBIA" },
       { property: "og:description", content: "Cum prognozăm calitatea apei pe Dunăre." },
     ],
   }),

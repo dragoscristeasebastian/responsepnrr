@@ -9,9 +9,9 @@ import droplet from "@/assets/droplet.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hidrocronică — Dunărea în date" },
+      { title: "DANUBIA — Dunărea în date" },
       { name: "description", content: "O experiență cinematică pentru a vedea, înțelege și prognoza calitatea apei pe fluviul Dunărea." },
-      { property: "og:title", content: "Hidrocronică — Dunărea în date" },
+      { property: "og:title", content: "DANUBIA — Dunărea în date" },
       { property: "og:description", content: "28 de ani, 16 parametri, 6 modele. Un atlas viu al fluviului." },
     ],
   }),

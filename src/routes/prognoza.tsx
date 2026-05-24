@@ -4,9 +4,9 @@ import { useEffect } from "react";
 export const Route = createFileRoute("/prognoza")({
   head: () => ({
     meta: [
-      { title: "Prognoza — Hidrocronică" },
+      { title: "Prognoza — DANUBIA" },
       { name: "description", content: "Atlas interactiv al calității apei: prognoze, anomalii, scenarii what-if și comparații între parametrii Dunării." },
-      { property: "og:title", content: "Prognoza — Hidrocronică" },
+      { property: "og:title", content: "Prognoza — DANUBIA" },
       { property: "og:description", content: "Șase ferestre interactive peste 28 de ani de date." },
     ],
   }),

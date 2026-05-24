@@ -5,9 +5,9 @@ import droplet from "@/assets/droplet.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Hidrocronică" },
+      { title: "Contact — DANUBIA" },
       { name: "description", content: "Scrie-ne despre date, colaborare sau proiecte de monitorizare a fluviului Dunărea." },
-      { property: "og:title", content: "Contact — Hidrocronică" },
+      { property: "og:title", content: "Contact — DANUBIA" },
       { property: "og:description", content: "Deschiși la colaborări în jurul datelor de mediu." },
     ],
   }),

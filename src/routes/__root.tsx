@@ -72,15 +72,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hidrocronică — Dunărea în date" },
+      { title: "DANUBIA — Dunărea în date" },
       { name: "description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
-      { name: "author", content: "Hidrocronică" },
-      { property: "og:title", content: "Hidrocronică — Dunărea în date" },
+      { name: "author", content: "DANUBIA" },
+      { property: "og:title", content: "DANUBIA — Dunărea în date" },
       { property: "og:description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Hidrocronică — Dunărea în date" },
+      { name: "twitter:title", content: "DANUBIA — Dunărea în date" },
       { name: "twitter:description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ca79bbdb-eedb-4fcf-94c6-7bba224e9128/id-preview-3473185a--235db7e6-6650-493b-84e1-9daa001551e6.lovable.app-1779601987574.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ca79bbdb-eedb-4fcf-94c6-7bba224e9128/id-preview-3473185a--235db7e6-6650-493b-84e1-9daa001551e6.lovable.app-1779601987574.png" },
@@ -146,7 +146,7 @@ function SiteHeader() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-transparent" />
       <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
         <Link to="/" className="group flex items-baseline gap-3">
-          <span className="font-display text-2xl tracking-tight">Hidrocronică</span>
+          <span className="font-display text-2xl tracking-tight">DANUBIA</span>
           <span className="hairline hidden text-muted-foreground md:inline">Dunărea / 1996—2023</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
@@ -184,7 +184,7 @@ function SiteFooter() {
     <footer className="border-t border-border/40 mt-32">
       <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-4 md:px-12">
         <div className="md:col-span-2">
-          <div className="font-display text-3xl">Hidrocronică</div>
+          <div className="font-display text-3xl">DANUBIA</div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
             Un proiect de monitorizare și prognoză a calității apei pe fluviul Dunărea —
             la întâlnirea dintre date deschise, statistică și contemplare.
@@ -211,7 +211,7 @@ function SiteFooter() {
       </div>
       <div className="border-t border-border/40">
         <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:px-12">
-          <span>© {new Date().getFullYear()} Hidrocronică. Datele aparțin sursei originale.</span>
+          <span>© {new Date().getFullYear()} DANUBIA. Datele aparțin sursei originale.</span>
           <span />
         </div>
       </div>
