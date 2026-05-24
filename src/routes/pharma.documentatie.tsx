@@ -6,9 +6,9 @@ import underwater from "@/assets/underwater.jpg";
 export const Route = createFileRoute("/pharma/documentatie")({
   head: () => ({
     meta: [
-      { title: "Documentație Pharma — Hidrocronică" },
+      { title: "Documentație Pharma — DANUBIA" },
       { name: "description", content: "Documentație tehnică completă pentru modelarea farmaceutică a compușilor din Dunăre. Arhitectură, modele, validare, API." },
-      { property: "og:title", content: "Documentație Pharma — Hidrocronică" },
+      { property: "og:title", content: "Documentație Pharma — DANUBIA" },
       { property: "og:description", content: "Arhitectură, 14 modele de regresie, validare, API endpoints și ghid de utilizare." },
     ],
   }),

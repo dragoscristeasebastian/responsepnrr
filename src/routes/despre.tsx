@@ -4,9 +4,9 @@ import delta from "@/assets/delta.jpg";
 export const Route = createFileRoute("/despre")({
   head: () => ({
     meta: [
-      { title: "Despre proiect — Hidrocronică" },
+      { title: "Despre proiect — DANUBIA" },
       { name: "description", content: "Context, surse de date și tehnologii din spatele monitorizării calității apei pe Dunăre." },
-      { property: "og:title", content: "Despre proiect — Hidrocronică" },
+      { property: "og:title", content: "Despre proiect — DANUBIA" },
       { property: "og:description", content: "Un proiect deschis de monitorizare a calității apei Dunării." },
     ],
   }),

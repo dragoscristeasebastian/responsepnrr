@@ -9,9 +9,9 @@ import droplet from "@/assets/droplet.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hidrocronică — Dunărea în date" },
+      { title: "DANUBIA — Dunărea în date" },
       { name: "description", content: "O experiență cinematică pentru a vedea, înțelege și prognoza calitatea apei pe fluviul Dunărea." },
-      { property: "og:title", content: "Hidrocronică — Dunărea în date" },
+      { property: "og:title", content: "DANUBIA — Dunărea în date" },
       { property: "og:description", content: "28 de ani, 16 parametri, 6 modele. Un atlas viu al fluviului." },
     ],
   }),
@@ -88,7 +88,7 @@ function Hero() {
         </p>
         <div className="reveal mt-10 flex flex-wrap items-center gap-6">
           <Link
-            to="/date-live"
+            to="/prognoza"
             className="group relative inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_var(--color-primary)]"
           >
             Intră în date
@@ -228,7 +228,7 @@ function Teaser() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       </div>
       <div className="relative mx-auto max-w-[1100px] px-6 text-center md:px-12">
-        <span className="hairline text-primary">Date Live</span>
+        <span className="hairline text-primary">Prognoza</span>
         <h2 className="mt-8 text-fluid-display font-display italic text-balance">
           Sub suprafață, datele așteaptă.
         </h2>
@@ -238,7 +238,7 @@ function Teaser() {
         </p>
         <div className="mt-12">
           <Link
-            to="/date-live"
+            to="/prognoza"
             className="group inline-flex items-center gap-3 rounded-full border border-primary/50 px-8 py-4 text-sm transition-all hover:bg-primary hover:text-primary-foreground"
           >
             Deschide atlasul

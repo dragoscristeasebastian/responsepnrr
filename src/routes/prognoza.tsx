@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
-export const Route = createFileRoute("/date-live")({
+export const Route = createFileRoute("/prognoza")({
   head: () => ({
     meta: [
-      { title: "Date Live — Hidrocronică" },
+      { title: "Prognoza — DANUBIA" },
       { name: "description", content: "Atlas interactiv al calității apei: prognoze, anomalii, scenarii what-if și comparații între parametrii Dunării." },
-      { property: "og:title", content: "Date Live — Hidrocronică" },
+      { property: "og:title", content: "Prognoza — DANUBIA" },
       { property: "og:description", content: "Șase ferestre interactive peste 28 de ani de date." },
     ],
   }),
@@ -30,7 +30,7 @@ function DateLive() {
         <div className="mx-auto max-w-[1100px]">
           <span className="hairline text-primary">Capitol II · Atlasul</span>
           <h1 className="mt-6 text-fluid-display font-display italic text-balance">
-            Date Live.
+            Prognoza.
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:gap-16">
             <p className="text-lg leading-relaxed text-foreground">
