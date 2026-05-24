@@ -56,6 +56,22 @@ function Hero() {
           />
         </video>
         {/* atmospheric overlays */}
+        {/* Golden sun rays + glow, positioned where the sun sits in the hero */}
+        <div
+          className="sun-rays"
+          style={{ top: "-20%", left: "35%", width: "70%", height: "100%" }}
+          aria-hidden
+        />
+        <div
+          className="sun-glow"
+          style={{ top: "8%", left: "46%", width: "320px", height: "320px" }}
+          aria-hidden
+        />
+        {/* Drifting mist layers over the river */}
+        <div className="mist-layer mist-layer-1" aria-hidden />
+        <div className="mist-layer mist-layer-2" aria-hidden />
+        <div className="mist-layer mist-layer-3" aria-hidden />
+
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-background" />
         <div className="absolute inset-0 shimmer mix-blend-overlay opacity-60" />
       </div>

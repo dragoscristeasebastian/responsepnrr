@@ -205,7 +205,7 @@ function SiteFooter() {
       <div className="border-t border-border/40">
         <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:px-12">
           <span>© {new Date().getFullYear()} Hidrocronică. Datele aparțin sursei originale.</span>
-          <span className="hairline">Construit cu liniște</span>
+          <span />
         </div>
       </div>
     </footer>
