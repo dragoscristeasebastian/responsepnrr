@@ -72,11 +72,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Hidrocronică — Dunărea în date" },
+      { name: "description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
+      { name: "author", content: "Hidrocronică" },
+      { property: "og:title", content: "Hidrocronică — Dunărea în date" },
+      { property: "og:description", content: "Un atlas vizual al calității apei fluviului Dunărea." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -85,6 +85,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
   }),
@@ -113,7 +119,95 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <SiteShell />
     </QueryClientProvider>
+  );
+}
+
+function SiteShell() {
+  return (
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <SiteHeader />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
+
+function SiteHeader() {
+  return (
+    <header className="fixed top-0 z-50 w-full backdrop-blur-md">
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-transparent" />
+      <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
+        <Link to="/" className="group flex items-baseline gap-3">
+          <span className="font-display text-2xl tracking-tight">Hidrocronică</span>
+          <span className="hairline hidden text-muted-foreground md:inline">Dunărea / 1996—2023</span>
+        </Link>
+        <nav className="hidden items-center gap-8 md:flex">
+          <NavItem to="/date-live" label="Date Live" />
+          <NavItem to="/metodologie" label="Metodologie" />
+          <NavItem to="/despre" label="Despre" />
+          <NavItem to="/contact" label="Contact" />
+        </nav>
+        <Link
+          to="/date-live"
+          className="hairline rounded-full border border-primary/40 px-4 py-2 text-primary transition-colors hover:bg-primary hover:text-primary-foreground md:hidden"
+        >
+          Date
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+function NavItem({ to, label }: { to: string; label: string }) {
+  return (
+    <Link
+      to={to}
+      className="hairline text-muted-foreground transition-colors hover:text-foreground"
+      activeProps={{ className: "hairline text-foreground" }}
+    >
+      {label}
+    </Link>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="border-t border-border/40 mt-32">
+      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-4 md:px-12">
+        <div className="md:col-span-2">
+          <div className="font-display text-3xl">Hidrocronică</div>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
+            Un proiect de monitorizare și prognoză a calității apei pe fluviul Dunărea —
+            la întâlnirea dintre date deschise, statistică și contemplare.
+          </p>
+        </div>
+        <div>
+          <div className="hairline text-muted-foreground">Navigație</div>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
+            <li><Link to="/date-live" className="hover:text-primary">Date Live</Link></li>
+            <li><Link to="/metodologie" className="hover:text-primary">Metodologie</Link></li>
+            <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
+          </ul>
+        </div>
+        <div>
+          <div className="hairline text-muted-foreground">Sursa datelor</div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            ICPDR — Comisia Internațională pentru Protecția Fluviului Dunărea.
+            Set 1996—2023.
+          </p>
+        </div>
+      </div>
+      <div className="border-t border-border/40">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:px-12">
+          <span>© {new Date().getFullYear()} Hidrocronică. Datele aparțin sursei originale.</span>
+          <span className="hairline">Construit cu liniște</span>
+        </div>
+      </div>
+    </footer>
   );
 }
