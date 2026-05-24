@@ -180,10 +180,10 @@ function NavItem({ to, label }: { to: string; label: string }) {
 
 function MetodologieMenu() {
   return (
-    <div className="group relative">
+    <div className="group relative flex items-center">
       <button
         type="button"
-        className="hairline cursor-default text-muted-foreground transition-colors group-hover:text-foreground"
+        className="hairline cursor-default bg-transparent p-0 text-muted-foreground transition-colors group-hover:text-foreground border-none"
       >
         Metodologie
       </button>
