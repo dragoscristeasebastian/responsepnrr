@@ -195,6 +195,8 @@ function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
             <li><Link to="/date-live" className="hover:text-primary">Date Live</Link></li>
+            <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
+            <li><Link to="/pharma/documentatie" className="hover:text-primary">Documentație Pharma</Link></li>
             <li><Link to="/metodologie" className="hover:text-primary">Metodologie</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
           </ul>
