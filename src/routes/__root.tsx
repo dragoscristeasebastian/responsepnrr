@@ -152,7 +152,7 @@ function SiteHeader() {
         <nav className="hidden items-center gap-8 md:flex">
           <NavItem to="/prognoza" label="Prognoza" />
           <NavItem to="/pharma" label="Pharma" />
-          <NavItem to="/metodologie" label="Metodologie" />
+          <MetodologieMenu />
           <NavItem to="/despre" label="Despre" />
           <NavItem to="/contact" label="Contact" />
         </nav>
@@ -179,6 +179,37 @@ function NavItem({ to, label }: { to: string; label: string }) {
   );
 }
 
+function MetodologieMenu() {
+  return (
+    <div className="group relative">
+      <button
+        type="button"
+        className="hairline cursor-default text-muted-foreground transition-colors group-hover:text-foreground"
+      >
+        Metodologie
+      </button>
+      <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+        <div className="min-w-[200px] rounded-sm border border-border/60 bg-background/95 py-2 shadow-xl backdrop-blur-md">
+          <Link
+            to="/metodologie"
+            className="hairline block px-5 py-2.5 text-muted-foreground transition-colors hover:bg-card/60 hover:text-foreground"
+            activeProps={{ className: "hairline block px-5 py-2.5 text-foreground bg-card/40" }}
+          >
+            Prognoza
+          </Link>
+          <Link
+            to="/pharma/documentatie"
+            className="hairline block px-5 py-2.5 text-muted-foreground transition-colors hover:bg-card/60 hover:text-foreground"
+            activeProps={{ className: "hairline block px-5 py-2.5 text-foreground bg-card/40" }}
+          >
+            Farmaceutice
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SiteFooter() {
   return (
     <footer className="border-t border-border/40 mt-32">
@@ -196,8 +227,6 @@ function SiteFooter() {
             <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
             <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
             <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
-            <li><Link to="/pharma/documentatie" className="hover:text-primary">Documentație Pharma</Link></li>
-            <li><Link to="/metodologie" className="hover:text-primary">Metodologie</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
           </ul>
         </div>
