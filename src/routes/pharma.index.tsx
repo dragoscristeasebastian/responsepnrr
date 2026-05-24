@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import delta from "@/assets/delta.jpg";
 
-export const Route = createFileRoute("/pharma")({
+export const Route = createFileRoute("/pharma/")({
   head: () => ({
     meta: [
       { title: "PNRR Pharma — Modelare farmaceutică" },
