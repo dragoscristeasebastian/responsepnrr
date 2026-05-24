@@ -150,14 +150,14 @@ function SiteHeader() {
           <span className="hairline hidden text-muted-foreground md:inline">Dunărea / 1996—2023</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
-          <NavItem to="/date-live" label="Date Live" />
+          <NavItem to="/prognoza" label="Prognoza" />
           <NavItem to="/pharma" label="Pharma" />
           <NavItem to="/metodologie" label="Metodologie" />
           <NavItem to="/despre" label="Despre" />
           <NavItem to="/contact" label="Contact" />
         </nav>
         <Link
-          to="/date-live"
+          to="/prognoza"
           className="hairline rounded-full border border-primary/40 px-4 py-2 text-primary transition-colors hover:bg-primary hover:text-primary-foreground md:hidden"
         >
           Date
@@ -194,7 +194,7 @@ function SiteFooter() {
           <div className="hairline text-muted-foreground">Navigație</div>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
-            <li><Link to="/date-live" className="hover:text-primary">Date Live</Link></li>
+            <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
             <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
             <li><Link to="/pharma/documentatie" className="hover:text-primary">Documentație Pharma</Link></li>
             <li><Link to="/metodologie" className="hover:text-primary">Metodologie</Link></li>
