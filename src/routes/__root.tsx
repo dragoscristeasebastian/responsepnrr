@@ -151,6 +151,7 @@ function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           <NavItem to="/date-live" label="Date Live" />
+          <NavItem to="/pharma" label="Pharma" />
           <NavItem to="/metodologie" label="Metodologie" />
           <NavItem to="/despre" label="Despre" />
           <NavItem to="/contact" label="Contact" />
