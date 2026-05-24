@@ -30,7 +30,7 @@ function DateLive() {
         <div className="mx-auto max-w-[1100px]">
           <span className="hairline text-primary">Capitol II · Atlasul</span>
           <h1 className="mt-6 text-fluid-display font-display italic text-balance">
-            Date Live.
+            Prognoza.
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-2 md:gap-16">
             <p className="text-lg leading-relaxed text-foreground">
