@@ -147,7 +147,6 @@ function SiteHeader() {
       <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
         <Link to="/" className="group flex items-baseline gap-3">
           <span className="font-display text-2xl tracking-tight">DANUBIA</span>
-          <span className="hairline hidden text-muted-foreground md:inline">Dunărea / 1996—2023</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           <NavItem to="/prognoza" label="Prognoza" />
