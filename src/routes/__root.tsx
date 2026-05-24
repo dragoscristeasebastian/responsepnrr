@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
       { name: "author", content: "Hidrocronică" },
       { property: "og:title", content: "Hidrocronică — Dunărea în date" },
-      { property: "og:description", content: "Un atlas vizual al calității apei fluviului Dunărea." },
+      { property: "og:description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Hidrocronică — Dunărea în date" },
+      { name: "twitter:description", content: "Monitorizare și prognoză cinematică a calității apei pe fluviul Dunărea. 28 de ani de date, 6 modele de prognoză, anomalii și scenarii what-if." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ca79bbdb-eedb-4fcf-94c6-7bba224e9128/id-preview-3473185a--235db7e6-6650-493b-84e1-9daa001551e6.lovable.app-1779601987574.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ca79bbdb-eedb-4fcf-94c6-7bba224e9128/id-preview-3473185a--235db7e6-6650-493b-84e1-9daa001551e6.lovable.app-1779601987574.png" },
     ],
     links: [
       {
