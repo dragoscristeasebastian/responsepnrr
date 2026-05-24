@@ -9,12 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PharmaRouteImport } from './routes/pharma'
 import { Route as MetodologieRouteImport } from './routes/metodologie'
 import { Route as DespreRouteImport } from './routes/despre'
 import { Route as DateLiveRouteImport } from './routes/date-live'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PharmaDocumentatieRouteImport } from './routes/pharma.documentatie'
 
+const PharmaRoute = PharmaRouteImport.update({
+  id: '/pharma',
+  path: '/pharma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MetodologieRoute = MetodologieRouteImport.update({
   id: '/metodologie',
   path: '/metodologie',
@@ -40,6 +47,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PharmaDocumentatieRoute = PharmaDocumentatieRouteImport.update({
+  id: '/documentatie',
+  path: '/documentatie',
+  getParentRoute: () => PharmaRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/date-live': typeof DateLiveRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/pharma': typeof PharmaRouteWithChildren
+  '/pharma/documentatie': typeof PharmaDocumentatieRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/date-live': typeof DateLiveRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/pharma': typeof PharmaRouteWithChildren
+  '/pharma/documentatie': typeof PharmaDocumentatieRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +78,37 @@ export interface FileRoutesById {
   '/date-live': typeof DateLiveRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/pharma': typeof PharmaRouteWithChildren
+  '/pharma/documentatie': typeof PharmaDocumentatieRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/date-live' | '/despre' | '/metodologie'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/date-live'
+    | '/despre'
+    | '/metodologie'
+    | '/pharma'
+    | '/pharma/documentatie'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/date-live' | '/despre' | '/metodologie'
-  id: '__root__' | '/' | '/contact' | '/date-live' | '/despre' | '/metodologie'
+  to:
+    | '/'
+    | '/contact'
+    | '/date-live'
+    | '/despre'
+    | '/metodologie'
+    | '/pharma'
+    | '/pharma/documentatie'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/date-live'
+    | '/despre'
+    | '/metodologie'
+    | '/pharma'
+    | '/pharma/documentatie'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,10 +117,18 @@ export interface RootRouteChildren {
   DateLiveRoute: typeof DateLiveRoute
   DespreRoute: typeof DespreRoute
   MetodologieRoute: typeof MetodologieRoute
+  PharmaRoute: typeof PharmaRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pharma': {
+      id: '/pharma'
+      path: '/pharma'
+      fullPath: '/pharma'
+      preLoaderRoute: typeof PharmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/metodologie': {
       id: '/metodologie'
       path: '/metodologie'
@@ -116,8 +164,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pharma/documentatie': {
+      id: '/pharma/documentatie'
+      path: '/documentatie'
+      fullPath: '/pharma/documentatie'
+      preLoaderRoute: typeof PharmaDocumentatieRouteImport
+      parentRoute: typeof PharmaRoute
+    }
   }
 }
+
+interface PharmaRouteChildren {
+  PharmaDocumentatieRoute: typeof PharmaDocumentatieRoute
+}
+
+const PharmaRouteChildren: PharmaRouteChildren = {
+  PharmaDocumentatieRoute: PharmaDocumentatieRoute,
+}
+
+const PharmaRouteWithChildren =
+  PharmaRoute._addFileChildren(PharmaRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -125,7 +191,18 @@ const rootRouteChildren: RootRouteChildren = {
   DateLiveRoute: DateLiveRoute,
   DespreRoute: DespreRoute,
   MetodologieRoute: MetodologieRoute,
+  PharmaRoute: PharmaRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
