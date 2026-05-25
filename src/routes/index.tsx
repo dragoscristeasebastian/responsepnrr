@@ -77,7 +77,7 @@ function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-24 md:px-12 md:pb-32">
-        <span className="hairline reveal text-primary">Capitol I · Fluviul observat</span>
+        <span className="hairline reveal text-primary">Capitol 0 · Fluviul observat</span>
         <h1 className="reveal-slow mt-6 max-w-5xl text-fluid-hero font-display italic text-balance">
           Dunărea curge.<br />
           <span className="not-italic text-foreground/90">Datele ne spun cum.</span>
