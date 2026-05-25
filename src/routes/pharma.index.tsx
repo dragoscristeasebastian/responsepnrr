@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import delta from "@/assets/delta.jpg";
 
@@ -16,20 +15,6 @@ export const Route = createFileRoute("/pharma/")({
 });
 
 function PharmaPage() {
-  useEffect(() => {
-    const id = "pharma-app-widget-script";
-    if (document.getElementById(id)) return;
-    const s = document.createElement("script");
-    s.id = id;
-    s.src = "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js";
-    s.defer = true;
-    document.body.appendChild(s);
-    return () => {
-      const existing = document.getElementById(id);
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <>
       <Hero />
@@ -83,7 +68,7 @@ function WidgetSection() {
               } as React.CSSProperties
             }
           >
-            <div data-pharma-app />
+            <div data-pharma-app data-default-lang="ro" />
           </div>
         </div>
       </div>
