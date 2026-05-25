@@ -109,6 +109,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js" />
+        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js" />
+        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-docs.min.js" />
+        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js" />
       </head>
       <body>
         {children}
