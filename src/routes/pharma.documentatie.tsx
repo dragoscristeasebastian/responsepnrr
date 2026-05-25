@@ -31,7 +31,7 @@ function Hero() {
       <img src={underwater} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover kenburns" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-20 md:px-12">
-        <span className="hairline text-primary">Capitol VI · Documentație</span>
+        <span className="hairline text-primary">CAPITOL V · MODELE</span>
         <h1 className="mt-6 max-w-4xl text-fluid-display font-display italic text-balance">
           Arhitectura din spate.<br />
           <span className="not-italic text-foreground/90">Modele, date, validare.</span>

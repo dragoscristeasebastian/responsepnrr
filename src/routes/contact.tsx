@@ -22,7 +22,7 @@ function Contact() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
       <div className="relative mx-auto grid max-w-[1400px] gap-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          <span className="hairline text-primary">Capitol V · Dialog</span>
+          <span className="hairline text-primary">CAPITOL VII · DIALOG</span>
           <h1 className="mt-6 text-fluid-display font-display italic text-balance">
             Scrie-ne.
           </h1>
