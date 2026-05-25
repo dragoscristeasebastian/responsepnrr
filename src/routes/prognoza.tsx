@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { WidgetHost } from "@/components/widget-host";
 
 export const Route = createFileRoute("/prognoza")({
   head: () => ({
@@ -52,7 +53,7 @@ function DateLive() {
                 } as React.CSSProperties
               }
             >
-              <div data-water-app />
+              <WidgetHost data-water-app />
             </div>
           </div>
           <p className="mt-6 text-center text-xs text-muted-foreground">

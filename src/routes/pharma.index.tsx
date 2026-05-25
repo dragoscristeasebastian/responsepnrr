@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { WidgetHost } from "@/components/widget-host";
 import delta from "@/assets/delta.jpg";
 
 export const Route = createFileRoute("/pharma/")({
@@ -68,7 +69,7 @@ function WidgetSection() {
               } as React.CSSProperties
             }
           >
-            <div data-pharma-app data-default-lang="ro" />
+            <WidgetHost data-pharma-app data-default-lang="ro" />
           </div>
         </div>
       </div>
