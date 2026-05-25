@@ -149,6 +149,7 @@ function SiteHeader() {
           <span className="font-display text-2xl tracking-tight">DANUBIA</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
+          <NavItem to="/spac" label="SPAC" />
           <NavItem to="/prognoza" label="Prognoza" />
           <NavItem to="/pharma" label="Pharma" />
           <MetodologieMenu />
@@ -224,6 +225,7 @@ function SiteFooter() {
           <div className="hairline text-muted-foreground">Navigație</div>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
+            <li><Link to="/spac" className="hover:text-primary">SPAC</Link></li>
             <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
             <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
