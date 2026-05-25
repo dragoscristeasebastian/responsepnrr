@@ -18,7 +18,7 @@ function DateLive() {
     <>
       <section className="relative px-6 pt-40 pb-20 md:px-12 md:pt-52">
         <div className="mx-auto max-w-[1100px]">
-          <span className="hairline text-primary">Capitol II · Atlasul</span>
+          <span className="hairline text-primary">CAPITOL II · PROGNOZA</span>
           <h1 className="mt-6 text-fluid-display font-display italic text-balance">
             Prognoza.
           </h1>

@@ -32,7 +32,7 @@ function Hero() {
       <img src={delta} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover kenburns" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
       <div className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-20 md:px-12">
-        <span className="hairline text-primary">Capitol V · Compusii fluviului</span>
+        <span className="hairline text-primary">CAPITOL III · COMPUSII FLUVIULUI</span>
         <h1 className="mt-6 max-w-4xl text-fluid-display font-display italic text-balance">
           Ce ascunde apa.<br />
           <span className="not-italic text-foreground/90">Modelare farmaceutică.</span>

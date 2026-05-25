@@ -18,7 +18,7 @@ function SpacPage() {
     <>
       <section className="relative px-6 pt-32 pb-8 md:px-12 md:pt-40">
         <div className="mx-auto max-w-[1100px]">
-          <span className="hairline text-primary">CAPITOL II · SOFT-SENSORS APĂ</span>
+          <span className="hairline text-primary">CAPITOL I · SOFT-SENSORS APĂ</span>
           <h1 className="mt-4 text-fluid-display font-display italic text-balance">
             Parametri fizico-chimici.
           </h1>
