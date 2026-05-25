@@ -97,6 +97,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
+    scripts: [
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js", defer: true },
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js", defer: true },
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-docs.min.js", defer: true },
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js", defer: true },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -109,10 +115,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js" />
-        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js" />
-        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-docs.min.js" />
-        <script defer src="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js" />
       </head>
       <body>
         {children}
