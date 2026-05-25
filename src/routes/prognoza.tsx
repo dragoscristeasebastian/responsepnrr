@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect } from "react";
 
 export const Route = createFileRoute("/prognoza")({
   head: () => ({
@@ -14,20 +13,6 @@ export const Route = createFileRoute("/prognoza")({
 });
 
 function DateLive() {
-  useEffect(() => {
-    const id = "water-app-widget-script";
-    if (document.getElementById(id)) return;
-    const s = document.createElement("script");
-    s.id = id;
-    s.src = "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js";
-    s.defer = true;
-    document.body.appendChild(s);
-    return () => {
-      const existing = document.getElementById(id);
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <>
       <section className="relative px-6 pt-40 pb-20 md:px-12 md:pt-52">
