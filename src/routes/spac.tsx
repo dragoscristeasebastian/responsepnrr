@@ -26,17 +26,17 @@ function SpacPage() {
 
   return (
     <>
-      <section className="relative px-6 pt-40 pb-20 md:px-12 md:pt-52">
+      <section className="relative px-6 pt-32 pb-8 md:px-12 md:pt-40">
         <div className="mx-auto max-w-[1100px]">
           <span className="hairline text-primary">CAPITOL II · SOFT-SENSORS APĂ</span>
-          <h1 className="mt-6 text-fluid-display font-display italic text-balance">
-            Parametri fizico-chimici. Prediți unii din alții.
+          <h1 className="mt-4 text-fluid-display font-display italic text-balance">
+            Parametri fizico-chimici.
           </h1>
         </div>
       </section>
 
-      <section className="relative px-6 pb-24 md:px-12">
-        <div className="mx-auto max-w-[1100px] py-20 md:py-[120px]">
+      <section className="relative px-6 pb-16 md:px-12">
+        <div className="mx-auto max-w-[1100px] pt-4 pb-12">
           <div data-spac-app data-default-lang="ro" />
         </div>
       </section>
