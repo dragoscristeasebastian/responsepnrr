@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { WidgetHost } from "@/components/widget-host";
 
 export const Route = createFileRoute("/spac")({
   head: () => ({
@@ -26,7 +27,7 @@ function SpacPage() {
 
       <section className="relative px-6 pb-16 md:px-12">
         <div className="mx-auto max-w-[1100px] pt-4 pb-12">
-          <div data-spac-app data-default-lang="ro" />
+          <WidgetHost data-spac-app data-default-lang="ro" />
         </div>
       </section>
     </>
