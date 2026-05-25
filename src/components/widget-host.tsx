@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type HTMLAttributes } from "react";
 
-type WidgetHostProps = React.HTMLAttributes<HTMLDivElement>;
+type WidgetHostProps = HTMLAttributes<HTMLDivElement>;
 
 export function WidgetHost(props: WidgetHostProps) {
   const [mounted, setMounted] = useState(false);
