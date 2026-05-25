@@ -22,6 +22,10 @@ function SpacPage() {
     s.src = "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js";
     s.defer = true;
     document.body.appendChild(s);
+    return () => {
+      const existing = document.getElementById(id);
+      if (existing) existing.remove();
+    };
   }, []);
 
   return (
