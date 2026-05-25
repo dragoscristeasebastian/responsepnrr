@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpacRouteImport } from './routes/spac'
 import { Route as PrognozaRouteImport } from './routes/prognoza'
 import { Route as PharmaRouteImport } from './routes/pharma'
 import { Route as MetodologieRouteImport } from './routes/metodologie'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PharmaIndexRouteImport } from './routes/pharma.index'
 import { Route as PharmaDocumentatieRouteImport } from './routes/pharma.documentatie'
 
+const SpacRoute = SpacRouteImport.update({
+  id: '/spac',
+  path: '/spac',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrognozaRoute = PrognozaRouteImport.update({
   id: '/prognoza',
   path: '/prognoza',
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/metodologie': typeof MetodologieRoute
   '/pharma': typeof PharmaRouteWithChildren
   '/prognoza': typeof PrognozaRoute
+  '/spac': typeof SpacRoute
   '/pharma/documentatie': typeof PharmaDocumentatieRoute
   '/pharma/': typeof PharmaIndexRoute
 }
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
   '/prognoza': typeof PrognozaRoute
+  '/spac': typeof SpacRoute
   '/pharma/documentatie': typeof PharmaDocumentatieRoute
   '/pharma': typeof PharmaIndexRoute
 }
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/metodologie': typeof MetodologieRoute
   '/pharma': typeof PharmaRouteWithChildren
   '/prognoza': typeof PrognozaRoute
+  '/spac': typeof SpacRoute
   '/pharma/documentatie': typeof PharmaDocumentatieRoute
   '/pharma/': typeof PharmaIndexRoute
 }
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/metodologie'
     | '/pharma'
     | '/prognoza'
+    | '/spac'
     | '/pharma/documentatie'
     | '/pharma/'
   fileRoutesByTo: FileRoutesByTo
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/despre'
     | '/metodologie'
     | '/prognoza'
+    | '/spac'
     | '/pharma/documentatie'
     | '/pharma'
   id:
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/metodologie'
     | '/pharma'
     | '/prognoza'
+    | '/spac'
     | '/pharma/documentatie'
     | '/pharma/'
   fileRoutesById: FileRoutesById
@@ -128,10 +140,18 @@ export interface RootRouteChildren {
   MetodologieRoute: typeof MetodologieRoute
   PharmaRoute: typeof PharmaRouteWithChildren
   PrognozaRoute: typeof PrognozaRoute
+  SpacRoute: typeof SpacRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/spac': {
+      id: '/spac'
+      path: '/spac'
+      fullPath: '/spac'
+      preLoaderRoute: typeof SpacRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/prognoza': {
       id: '/prognoza'
       path: '/prognoza'
@@ -211,6 +231,7 @@ const rootRouteChildren: RootRouteChildren = {
   MetodologieRoute: MetodologieRoute,
   PharmaRoute: PharmaRouteWithChildren,
   PrognozaRoute: PrognozaRoute,
+  SpacRoute: SpacRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
