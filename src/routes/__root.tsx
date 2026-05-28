@@ -237,6 +237,7 @@ function SiteFooter() {
             <li><Link to="/spac" className="hover:text-primary">SPAC</Link></li>
             <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
             <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
+            <li><Link to="/microbiome" className="hover:text-primary">Microbiome</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
           </ul>
         </div>
