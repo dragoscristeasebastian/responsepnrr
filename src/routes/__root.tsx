@@ -160,6 +160,7 @@ function SiteHeader() {
           <NavItem to="/spac" label="SPAC" />
           <NavItem to="/prognoza" label="Prognoza" />
           <NavItem to="/pharma" label="Pharma" />
+          <NavItem to="/microbiome" label="Microbiome" />
           <MetodologieMenu />
           <NavItem to="/despre" label="Despre" />
           <NavItem to="/contact" label="Contact" />
