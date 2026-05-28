@@ -98,10 +98,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      { src: "https://cdn.plot.ly/plotly-2.35.0.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-docs.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js", defer: true },
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/microbiome-dashboard.min.js", defer: true },
     ],
   }),
   shellComponent: RootShell,
