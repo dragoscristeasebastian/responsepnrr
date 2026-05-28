@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpacRouteImport } from './routes/spac'
 import { Route as PrognozaRouteImport } from './routes/prognoza'
 import { Route as PharmaRouteImport } from './routes/pharma'
+import { Route as MicrobiomeRouteImport } from './routes/microbiome'
 import { Route as MetodologieRouteImport } from './routes/metodologie'
 import { Route as DespreRouteImport } from './routes/despre'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -32,6 +33,11 @@ const PrognozaRoute = PrognozaRouteImport.update({
 const PharmaRoute = PharmaRouteImport.update({
   id: '/pharma',
   path: '/pharma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MicrobiomeRoute = MicrobiomeRouteImport.update({
+  id: '/microbiome',
+  path: '/microbiome',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetodologieRoute = MetodologieRouteImport.update({
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/microbiome': typeof MicrobiomeRoute
   '/pharma': typeof PharmaRouteWithChildren
   '/prognoza': typeof PrognozaRoute
   '/spac': typeof SpacRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/microbiome': typeof MicrobiomeRoute
   '/prognoza': typeof PrognozaRoute
   '/spac': typeof SpacRoute
   '/pharma/documentatie': typeof PharmaDocumentatieRoute
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
+  '/microbiome': typeof MicrobiomeRoute
   '/pharma': typeof PharmaRouteWithChildren
   '/prognoza': typeof PrognozaRoute
   '/spac': typeof SpacRoute
@@ -105,6 +114,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/despre'
     | '/metodologie'
+    | '/microbiome'
     | '/pharma'
     | '/prognoza'
     | '/spac'
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/despre'
     | '/metodologie'
+    | '/microbiome'
     | '/prognoza'
     | '/spac'
     | '/pharma/documentatie'
@@ -126,6 +137,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/despre'
     | '/metodologie'
+    | '/microbiome'
     | '/pharma'
     | '/prognoza'
     | '/spac'
@@ -138,6 +150,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DespreRoute: typeof DespreRoute
   MetodologieRoute: typeof MetodologieRoute
+  MicrobiomeRoute: typeof MicrobiomeRoute
   PharmaRoute: typeof PharmaRouteWithChildren
   PrognozaRoute: typeof PrognozaRoute
   SpacRoute: typeof SpacRoute
@@ -164,6 +177,13 @@ declare module '@tanstack/react-router' {
       path: '/pharma'
       fullPath: '/pharma'
       preLoaderRoute: typeof PharmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/microbiome': {
+      id: '/microbiome'
+      path: '/microbiome'
+      fullPath: '/microbiome'
+      preLoaderRoute: typeof MicrobiomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metodologie': {
@@ -229,6 +249,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DespreRoute: DespreRoute,
   MetodologieRoute: MetodologieRoute,
+  MicrobiomeRoute: MicrobiomeRoute,
   PharmaRoute: PharmaRouteWithChildren,
   PrognozaRoute: PrognozaRoute,
   SpacRoute: SpacRoute,
