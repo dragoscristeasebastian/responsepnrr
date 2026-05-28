@@ -98,10 +98,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
+      { src: "https://cdn.plot.ly/plotly-2.35.0.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/water-app.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-app.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/pharma-docs.min.js", defer: true },
       { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/spac-app.min.js", defer: true },
+      { src: "https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/microbiome-dashboard.min.js", defer: true },
     ],
   }),
   shellComponent: RootShell,
@@ -158,6 +160,7 @@ function SiteHeader() {
           <NavItem to="/spac" label="SPAC" />
           <NavItem to="/prognoza" label="Prognoza" />
           <NavItem to="/pharma" label="Pharma" />
+          <NavItem to="/microbiome" label="Microbiome" />
           <MetodologieMenu />
           <NavItem to="/despre" label="Despre" />
           <NavItem to="/contact" label="Contact" />
@@ -234,6 +237,7 @@ function SiteFooter() {
             <li><Link to="/spac" className="hover:text-primary">SPAC</Link></li>
             <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
             <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
+            <li><Link to="/microbiome" className="hover:text-primary">Microbiome</Link></li>
             <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
           </ul>
         </div>
