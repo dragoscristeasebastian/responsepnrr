@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { WidgetHost } from "@/components/widget-host";
 
 export const Route = createFileRoute("/microbiome")({
   head: () => ({
@@ -26,12 +25,13 @@ function MicrobiomePage() {
       </section>
 
       <section className="relative px-6 pb-16 md:px-12">
-        <div className="mx-auto max-w-[1100px] pt-4 pb-12">
-          <WidgetHost
+        <div className="mx-auto max-w-[1440px] pt-4 pb-12">
+          <div
             data-microbiome-dashboard
             data-data-url="https://pub-4bad77dfbee14abcb5b45d1134090a7b.r2.dev/v1/data"
             data-default-dataset="water_genus"
             data-default-section="overview"
+            suppressHydrationWarning
             style={{ width: "100%", minHeight: "calc(100vh - 120px)" }}
           />
         </div>
