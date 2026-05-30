@@ -15,7 +15,6 @@ import { Route as PharmaRouteImport } from './routes/pharma'
 import { Route as MicrobiomeRouteImport } from './routes/microbiome'
 import { Route as MetodologieRouteImport } from './routes/metodologie'
 import { Route as DespreRouteImport } from './routes/despre'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PharmaIndexRouteImport } from './routes/pharma.index'
 import { Route as PharmaDocumentatieRouteImport } from './routes/pharma.documentatie'
@@ -50,11 +49,6 @@ const DespreRoute = DespreRouteImport.update({
   path: '/despre',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -73,7 +67,6 @@ const PharmaDocumentatieRoute = PharmaDocumentatieRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
   '/microbiome': typeof MicrobiomeRoute
@@ -85,7 +78,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
   '/microbiome': typeof MicrobiomeRoute
@@ -97,7 +89,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/despre': typeof DespreRoute
   '/metodologie': typeof MetodologieRoute
   '/microbiome': typeof MicrobiomeRoute
@@ -111,7 +102,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/contact'
     | '/despre'
     | '/metodologie'
     | '/microbiome'
@@ -123,7 +113,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/contact'
     | '/despre'
     | '/metodologie'
     | '/microbiome'
@@ -134,7 +123,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/contact'
     | '/despre'
     | '/metodologie'
     | '/microbiome'
@@ -147,7 +135,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ContactRoute: typeof ContactRoute
   DespreRoute: typeof DespreRoute
   MetodologieRoute: typeof MetodologieRoute
   MicrobiomeRoute: typeof MicrobiomeRoute
@@ -200,13 +187,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DespreRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -246,7 +226,6 @@ const PharmaRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ContactRoute: ContactRoute,
   DespreRoute: DespreRoute,
   MetodologieRoute: MetodologieRoute,
   MicrobiomeRoute: MicrobiomeRoute,
@@ -257,3 +236,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
