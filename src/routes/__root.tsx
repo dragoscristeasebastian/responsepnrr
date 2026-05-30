@@ -167,7 +167,7 @@ function SiteHeader() {
           <NavItem to="/microbiome" label="Microbiome" />
           <MetodologieMenu />
           <NavItem to="/despre" label="Despre" />
-          <NavItem to="/contact" label="Contact" />
+          
         </nav>
         <Link
           to="/prognoza"
