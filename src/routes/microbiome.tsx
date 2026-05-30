@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/microbiome")({
   head: () => ({
     meta: [
-      { title: "Microbiome — DANUBIA" },
+      { title: "Microbiom — DANUBIA" },
       { name: "description", content: "Analiza microbiomului fluviului Dunărea. Date de secvențiere și vizualizare interactivă." },
-      { property: "og:title", content: "Microbiome — DANUBIA" },
+      { property: "og:title", content: "Microbiom — DANUBIA" },
       { property: "og:description", content: "Analiza microbiomului fluviului Dunărea. Date de secvențiere și vizualizare interactivă." },
     ],
   }),
@@ -17,7 +17,7 @@ function MicrobiomePage() {
     <>
       <section className="relative px-6 pt-32 pb-8 md:px-12 md:pt-40">
         <div className="mx-auto max-w-[1100px]">
-          <span className="hairline text-primary">CAPITOL VIII · MICROBIOME</span>
+          <span className="hairline text-primary">CAPITOL VIII · MICROBIOM</span>
           <h1 className="mt-4 text-fluid-display font-display italic text-balance">
             Analiza microbiomului.
           </h1>
