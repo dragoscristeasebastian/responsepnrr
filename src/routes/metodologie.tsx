@@ -34,7 +34,7 @@ function Metodologie() {
     <>
       <section className="px-6 pt-40 pb-20 md:px-12 md:pt-52">
         <div className="mx-auto max-w-[1100px]">
-          <span className="hairline text-primary">CAPITOL IV · METODĂ</span>
+          <span className="hairline text-primary">CAPITOL V · METODĂ</span>
           <h1 className="mt-6 text-fluid-display font-display italic text-balance">
             Cum prognozăm<br />
             <span className="not-italic text-muted-foreground">un fluviu.</span>
