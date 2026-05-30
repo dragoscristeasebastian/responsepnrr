@@ -9,9 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import logoGuvern from "@/assets/guvernul-romaniei.svg";
-import logoPnrr from "@/assets/pnrr.svg";
-import logoUe from "@/assets/finantat-ue.svg";
+import bannerPnrr from "@/assets/banner-pnrr.png";
 
 function NotFoundComponent() {
   return (
@@ -231,46 +229,13 @@ function SiteFooter() {
     <footer className="border-t border-border/40 mt-32">
       <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12">
         <div className="hairline text-muted-foreground">Proiect finanțat prin</div>
-        <div className="mt-8 grid grid-cols-1 items-center gap-10 sm:grid-cols-3 sm:gap-12">
-          <a
-            href="https://gov.ro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center"
-          >
-            <img
-              src={logoGuvern}
-              alt="Guvernul României"
-              className="h-20 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
-              loading="lazy"
-            />
-          </a>
-          <a
-            href="https://mfe.gov.ro/pnrr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center"
-          >
-            <img
-              src={logoPnrr}
-              alt="Planul Național de Redresare și Reziliență (PNRR)"
-              className="h-16 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
-              loading="lazy"
-            />
-          </a>
-          <a
-            href="https://next-generation-eu.europa.eu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center"
-          >
-            <img
-              src={logoUe}
-              alt="Finanțat de Uniunea Europeană — NextGenerationEU"
-              className="h-16 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
-              loading="lazy"
-            />
-          </a>
+        <div className="mt-8 rounded-sm bg-white/95 px-6 py-8 md:px-10 md:py-10">
+          <img
+            src={bannerPnrr}
+            alt="Finanțat de Uniunea Europeană — NextGenerationEU · Guvernul României · Planul Național de Redresare și Reziliență"
+            className="mx-auto h-auto w-full max-w-[1100px]"
+            loading="lazy"
+          />
         </div>
       </div>
       <div className="border-t border-border/40">
