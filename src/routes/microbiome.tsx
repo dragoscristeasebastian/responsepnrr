@@ -17,7 +17,7 @@ function MicrobiomePage() {
     <>
       <section className="relative px-6 pt-32 pb-8 md:px-12 md:pt-40">
         <div className="mx-auto max-w-[1100px]">
-          <span className="hairline text-primary">CAPITOL VIII · MICROBIOM</span>
+          <span className="hairline text-primary">CAPITOL IV · MICROBIOM</span>
           <h1 className="mt-4 text-fluid-display font-display italic text-balance">
             Analiza microbiomului.
           </h1>
