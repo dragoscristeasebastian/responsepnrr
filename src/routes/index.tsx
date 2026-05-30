@@ -39,7 +39,7 @@ function Hero() {
           alt="Fluviul Dunărea în zori, ceață peste apă"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover kenburns"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <video
           className="absolute inset-0 h-full w-full object-cover opacity-60"
