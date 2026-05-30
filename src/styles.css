@@ -246,7 +246,8 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 70% 60%, 50% 50%;
   mix-blend-mode: screen;
-  will-change: background-position, opacity;
+  filter: blur(2px) drop-shadow(0 0 30px oklch(0.92 0.04 80 / 0.18));
+  opacity: 0.55;
 }
 .mist-layer-1 {
   background-image:
