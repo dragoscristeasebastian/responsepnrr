@@ -228,8 +228,7 @@ function SiteFooter() {
   return (
     <footer className="border-t border-border/40 mt-32">
       <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12">
-        <div className="hairline text-muted-foreground">Proiect finanțat prin</div>
-        <div className="mt-8 rounded-sm bg-white/95 px-6 py-8 md:px-10 md:py-10">
+        <div className="rounded-sm bg-white/95 px-6 py-8 md:px-10 md:py-10">
           <img
             src={bannerPnrr}
             alt="Finanțat de Uniunea Europeană — NextGenerationEU · Guvernul României · Planul Național de Redresare și Reziliență"
