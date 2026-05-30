@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logoGuvern from "@/assets/guvernul-romaniei.svg";
+import logoPnrr from "@/assets/pnrr.svg";
+import logoUe from "@/assets/finantat-ue.svg";
 
 function NotFoundComponent() {
   return (
@@ -226,31 +229,48 @@ function MetodologieMenu() {
 function SiteFooter() {
   return (
     <footer className="border-t border-border/40 mt-32">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 md:grid-cols-4 md:px-12">
-        <div className="md:col-span-2">
-          <div className="font-display text-3xl">DANUBIA</div>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Un proiect de monitorizare și prognoză a calității apei pe fluviul Dunărea —
-            la întâlnirea dintre date deschise, statistică și contemplare.
-          </p>
-        </div>
-        <div>
-          <div className="hairline text-muted-foreground">Navigație</div>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-primary">Acasă</Link></li>
-            <li><Link to="/spac" className="hover:text-primary">SPAC</Link></li>
-            <li><Link to="/prognoza" className="hover:text-primary">Prognoza</Link></li>
-            <li><Link to="/pharma" className="hover:text-primary">Pharma</Link></li>
-            <li><Link to="/microbiome" className="hover:text-primary">Microbiome</Link></li>
-            <li><Link to="/despre" className="hover:text-primary">Despre</Link></li>
-          </ul>
-        </div>
-        <div>
-          <div className="hairline text-muted-foreground">Sursa datelor</div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            ICPDR — Comisia Internațională pentru Protecția Fluviului Dunărea.
-            Set 1996—2023.
-          </p>
+      <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12">
+        <div className="hairline text-muted-foreground">Proiect finanțat prin</div>
+        <div className="mt-8 grid grid-cols-1 items-center gap-10 sm:grid-cols-3 sm:gap-12">
+          <a
+            href="https://gov.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center"
+          >
+            <img
+              src={logoGuvern}
+              alt="Guvernul României"
+              className="h-20 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://mfe.gov.ro/pnrr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center"
+          >
+            <img
+              src={logoPnrr}
+              alt="Planul Național de Redresare și Reziliență (PNRR)"
+              className="h-16 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://next-generation-eu.europa.eu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center"
+          >
+            <img
+              src={logoUe}
+              alt="Finanțat de Uniunea Europeană — NextGenerationEU"
+              className="h-16 w-auto opacity-70 transition-opacity hover:opacity-100 footer-logo"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
       <div className="border-t border-border/40">
