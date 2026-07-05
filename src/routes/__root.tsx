@@ -168,7 +168,22 @@ function SiteHeader() {
           <NavItem to="/microbiome" label="Microbiom" />
           <MetodologieMenu />
           <NavItem to="/despre" label="Despre" />
-          
+          <a
+            href="https://partners-outputs-tunes-performed.trycloudflare.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hairline text-muted-foreground transition-colors hover:text-foreground"
+          >
+            UAV5
+          </a>
+          <a
+            href="https://comm-lightbox-formatting-epa.trycloudflare.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hairline text-muted-foreground transition-colors hover:text-foreground"
+          >
+            AI-DL
+          </a>
         </nav>
         <Link
           to="/prognoza"
