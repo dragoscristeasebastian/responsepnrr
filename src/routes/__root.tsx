@@ -162,12 +162,6 @@ function SiteHeader() {
           <span className="font-display text-2xl tracking-tight">DANUBIA</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
-          <NavItem to="/spac" label="SPAC" />
-          <NavItem to="/prognoza" label="Prognoza" />
-          <NavItem to="/pharma" label="Pharma" />
-          <NavItem to="/microbiome" label="Microbiom" />
-          <MetodologieMenu />
-          <NavItem to="/despre" label="Despre" />
           <a
             href="https://partners-outputs-tunes-performed.trycloudflare.com"
             target="_blank"
@@ -184,6 +178,12 @@ function SiteHeader() {
           >
             AI-DL
           </a>
+          <NavItem to="/spac" label="SPAC" />
+          <NavItem to="/prognoza" label="Prognoza" />
+          <NavItem to="/pharma" label="Pharma" />
+          <NavItem to="/microbiome" label="Microbiom" />
+          <MetodologieMenu />
+          <NavItem to="/despre" label="Despre" />
         </nav>
         <Link
           to="/prognoza"
