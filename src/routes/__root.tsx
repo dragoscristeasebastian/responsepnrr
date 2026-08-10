@@ -163,7 +163,7 @@ function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           <a
-            href="https://partners-outputs-tunes-performed.trycloudflare.com"
+            href="https://frequency-ltd-deck-directors.trycloudflare.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hairline text-muted-foreground transition-colors hover:text-foreground"
@@ -171,7 +171,7 @@ function SiteHeader() {
             UAV5
           </a>
           <a
-            href="https://comm-lightbox-formatting-epa.trycloudflare.com"
+            href="https://consultants-testing-frequent-narrative.trycloudflare.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hairline text-muted-foreground transition-colors hover:text-foreground"
